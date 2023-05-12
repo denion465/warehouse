@@ -6,30 +6,20 @@
 - SKU
 - BRAND
 - QUANTITY (TOTAL)
-- MEASURE UNIT
 
 ### Intake
 - ID
 - PRODUCT
-- QUANTITY (RECEBIDA)
-- SUPPLIER
+- QUANTITY
 - BATCH
 - DATE
 
 ### Write-off
 - ID
 - PRODUCT
-- QUANTITY (SÁIDA)
+- QUANTITY
 - DATE
 - WITHDRAWAL REASON
-- OBSERVATIONS
-
-### Supplier
-- ID
-- NAME
-- EMAIL
-- ADDRESS
-- PHONES: []
 - OBSERVATIONS
 
 ### User
@@ -37,14 +27,14 @@
 - USERNAME
 - PASSWORD
 - EMAIL
+- ROLES
 - CREATED_AT
 - UPDATED_AT
 
 # Use cases
 - Cadastrar um produto
-- Dar entrada a um produto
-- Dar baixa a um produto
-- Cadastrar um fornecedor (Somente administrador terá permissões)
+- Dar entrada a um produto (Somente gestor)
+- Dar baixa a um produto (Somente gestor)
 - Cadastrar usúario do sistema
 
 

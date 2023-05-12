@@ -19,4 +19,4 @@ export class Product extends Document {
   quantity: number;
 }
 
-export const UserSchema = SchemaFactory.createForClass(Product);
+export const ProductSchema = SchemaFactory.createForClass(Product);

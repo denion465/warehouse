@@ -1,4 +1,4 @@
-import { Logger, ValidationPipe } from '@nestjs/common';
+import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { Transport } from '@nestjs/microservices';
 import { AppModule } from './app.module';
@@ -18,7 +18,6 @@ async function bootstrap() {
       queue: RABBITMQ_QUEUE_NAME,
     },
   });
-  app.useGlobalPipes(new ValidationPipe());
   await app.listen();
   new Logger('Main').log('Microservice is listening');
 }

@@ -2,16 +2,19 @@ import { Config } from 'jest';
 
 const config: Config = {
   moduleFileExtensions: ['js', 'json', 'ts'],
-  rootDir: 'src',
+  roots: ['<rootDir>/test'],
   testRegex: '.*\\.spec\\.ts$',
   transform: {
     '^.+\\.(t|j)s$': 'ts-jest',
+  },
+  moduleNameMapper: {
+    '^src/(.*)$': '<rootDir>/src/$1',
   },
   collectCoverageFrom: ['**/*.(t|j)s'],
   coverageDirectory: '../coverage',
   testEnvironment: 'node',
   clearMocks: true,
-  watchPathIgnorePatterns: ['node_modules'],
+  watchPathIgnorePatterns: ['node_modules', 'dist'],
   coverageProvider: 'v8',
   coverageThreshold: {
     global: {
